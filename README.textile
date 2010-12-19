@@ -1,0 +1,32 @@
+h1. Paperclip Environment Aware
+
+This gem allows you to easily configure different stores in the different Rails environments for "paperclip":https://github.com/thoughtbot/paperclip attachments. This is useful, for example, when you want to use S3 in production but not in development mode. You should be able to configure paperclip to use the file system storage in development and S3 in production. Also it's usefull to have different buckets or paths for each environment.
+
+h2. Quick Start
+
+Create @config/paperclip_env.yml@ with your configurations (similar to database.yml)
+Ej.
+
+<pre>
+  # config/paperclip_env.yml
+  ---
+  production:
+    storage: :s3
+    s3_credentials:
+      access_key_id: ASI3p24809we8409
+      secret_access_key: V3Cxnx23yKuViGEzQPqrVVRwhUzSmTpD+wN/M0WL
+    path: ":attachment/:id/:style/:basename.:extension"
+    bucket: some_bucket
+</pre>
+
+<pre>
+  class SomeModel < ActiveRecord::Base
+    has_attached_file :main_photo
+  end
+</pre>
+With this configuration your non-production environments will store in your file system and your production environment will store in S3
+
+h2. TODO
+
+Currently it's not very flexible, but I'll work to allow different configurations for differents models.
+
