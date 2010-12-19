@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "paperclip-env_aware/version"
+require "paperclip/env_aware/version"
 
 Gem::Specification.new do |s|
   s.name        = "paperclip-env_aware"
-  s.version     = Paperclip::Envaware::VERSION
+  s.version     = Paperclip::EnvAware::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Juan Manuel Barreneche"]
   s.email       = ["juanmanuel.barreneche@gmail.com"]

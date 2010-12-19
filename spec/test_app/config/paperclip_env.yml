@@ -1,0 +1,4 @@
+---
+development:
+  path: ":rails_root/public:url"
+  url: "/system2/:attachment/:id/:style/:filename"

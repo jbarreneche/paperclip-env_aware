@@ -4,3 +4,4 @@ source "http://rubygems.org"
 gemspec
 
 gem 'rspec'
+gem 'rails', '>= 3.0'

@@ -1,2 +1,3 @@
 Gemfile.lock
 pkg
+spec/test_app/public/system2

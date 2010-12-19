@@ -1,5 +1,5 @@
 module Paperclip
-  module Envaware
+  module EnvAware
     VERSION = "0.0.1"
   end
 end
